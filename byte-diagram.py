@@ -111,8 +111,9 @@ def main():
     payload = bytearray.fromhex(args.str)
     
     desc = []
-    for d in args.desc:
-        desc.append(d.strip())
+    if args.desc:
+        for d in args.desc:
+            desc.append(d.strip())
         
     generate_lines(payload, desc)
 
